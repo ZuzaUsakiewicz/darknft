@@ -56,6 +56,24 @@ export const NavbarList = styled.ul`
 export const NavbarLink = styled(Link)`
   color: ${({ theme }) => theme.colors.bodyTextColor};
   text-decoration: none;
+  position: relative;
+  @media ${mediaQueries.laptop} {
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: ${({ theme }) => theme.colors.accentColor};
+      bottom: -10px;
+      left: 0;
+      transform: scaleX(0);
+      transition: transform 0.4s linear;
+      transform-origin: center;
+    }
+    &:hover:after {
+      transform: scaleX(100%);
+    }
+  }
 `;
 
 export const HamburgerButton = styled.button`

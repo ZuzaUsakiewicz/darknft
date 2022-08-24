@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   NavbarList,
@@ -30,9 +31,9 @@ const Navigation = () => {
 
   return (
     <Navbar navBg={navBg}>
-      <NavbarLink to="/" onClick={() => setOpen(false)}>
+      <Link to="/" onClick={() => setOpen(false)}>
         <img src={Logo} alt="nft logo" />
-      </NavbarLink>
+      </Link>
       <NavbarList open={open} onClick={() => setOpen(false)}>
         <li>
           <NavbarLink to="/">Home</NavbarLink>

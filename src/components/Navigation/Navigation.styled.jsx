@@ -44,11 +44,10 @@ export const NavbarList = styled.ul`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-140%)")};
   background: ${({ theme }) => theme.colors.backgroundColor};
   transition: transform 0.6s linear;
-
+  gap: 2rem;
   @media ${mediaQueries.laptop} {
     transform: translate(0);
     flex-direction: row;
-    gap: 2rem;
     height: 6rem;
     background: transparent;
   }
@@ -57,6 +56,7 @@ export const NavbarLink = styled(Link)`
   color: ${({ theme }) => theme.colors.bodyTextColor};
   text-decoration: none;
   position: relative;
+  font-size: 1.125rem;
   @media ${mediaQueries.laptop} {
     &:after {
       position: absolute;

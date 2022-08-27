@@ -10,6 +10,7 @@ export const Navbar = styled.nav`
   height: 3rem;
   background: ${({ navBg }) =>
     navBg ? "rgba(7, 0, 0, 0.452)" : "transparent"};
+  z-index: 999;
   transition: background 0.5s linear;
   img {
     position: absolute;

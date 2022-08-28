@@ -8,10 +8,12 @@ import {
   ActionButton,
 } from "./Navigation.styled";
 import Logo from "../../assets/logo.svg";
+import Modal from "../Modal/Modal";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [navBg, setNavBg] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   const toggleMenu = () => {
     setOpen((prev) => !prev);
@@ -48,7 +50,9 @@ const Navigation = () => {
           <NavbarLink to="/community">Community</NavbarLink>
         </li>
         <li>
-          <ActionButton>Connect Wallet</ActionButton>
+          <ActionButton onClick={() => setIsOpenModal(true)}>
+            Connect Wallet
+          </ActionButton>
         </li>
       </NavbarList>
       <HamburgerButton onClick={() => toggleMenu()} open={open}>
@@ -56,6 +60,9 @@ const Navigation = () => {
         <div></div>
         <div></div>
       </HamburgerButton>
+      <Modal handleClose={() => setIsOpenModal(false)} isOpen={isOpenModal}>
+        This is Modal Content!
+      </Modal>
     </Navbar>
   );
 };

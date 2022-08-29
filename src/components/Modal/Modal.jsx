@@ -14,7 +14,10 @@ function Modal({ children, isOpen, handleClose }) {
 
   return (
     <ModalContainer>
-      <CloseButton onClick={handleClose}>Close</CloseButton>
+      <CloseButton onClick={handleClose}>
+        <div></div>
+        <div></div>
+      </CloseButton>
       <ModalContent>{children}</ModalContent>
     </ModalContainer>
   );

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LiveAuctionsContainer } from "./LiveAuctions.styled";
+import { LiveAuctionsContainer, CardsContainer } from "./LiveAuctions.styled";
 import { SectionTitle } from "../Reusables/SectionTitle.styled";
 import NftCard from "../Reusables/NftCard";
 import { NftContext } from "../../App";
@@ -11,9 +11,11 @@ const LiveAuctions = () => {
   return (
     <LiveAuctionsContainer>
       <SectionTitle>live auctions</SectionTitle>
-      {threeCards.map((item) => {
-        return <NftCard key={item.id} item={item} />;
-      })}
+      <CardsContainer>
+        {threeCards.map((item) => {
+          return <NftCard key={item.id} item={item} />;
+        })}
+      </CardsContainer>
     </LiveAuctionsContainer>
   );
 };

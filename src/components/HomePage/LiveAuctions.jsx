@@ -3,6 +3,7 @@ import { LiveAuctionsContainer, CardsContainer } from "./LiveAuctions.styled";
 import { SectionTitle } from "../Reusables/SectionTitle.styled";
 import NftCard from "../Reusables/NftCard";
 import { NftContext } from "../../App";
+import { Button } from "../Buttons/Button.styled";
 
 const LiveAuctions = () => {
   const data = useContext(NftContext);
@@ -16,6 +17,7 @@ const LiveAuctions = () => {
           return <NftCard key={item.id} item={item} />;
         })}
       </CardsContainer>
+      <Button to="/">view all</Button>
     </LiveAuctionsContainer>
   );
 };

@@ -4,7 +4,7 @@ import { mediaQueries } from "../../theme/mediaQueries";
 export const ModalContainer = styled.div`
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.833);
+  background-color: rgba(60, 55, 55, 0.833);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,16 +12,35 @@ export const ModalContainer = styled.div`
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   z-index: 999;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
 `;
 export const CloseButton = styled.button`
   background: transparent;
   border: none;
   width: 2rem;
   height: 2rem;
-  position: fixed;
-  top: 15%;
-  right: 10%;
+  top: -2rem;
+  position: relative;
+  @media ${mediaQueries.tablet} {
+    top: -3rem;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background: ${({ theme }) => theme.colors.cardButtonBgColor};
+    border-radius: 50%;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 0.4s linear, transform 0.3s linear;
+  }
+  &:hover {
+    &:before {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
   div {
     width: 100%;
     height: 3px;
@@ -33,21 +52,20 @@ export const CloseButton = styled.button`
       transform: rotate(-45deg) translate(1px);
     }
   }
-  @media ${mediaQueries.laptop} {
-    right: 25%;
-  }
 `;
 
 export const ModalContent = styled.div`
-  width: 80%;
-  height: 70%;
-  background-color: ${({ theme }) => theme.colors.cardBackgroundColor};
+  width: 16.5rem;
+  height: 34rem;
+  background: ${({ theme }) => theme.colors.cardButtonBgColor};
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
+  border-radius: 10px;
   @media ${mediaQueries.laptop} {
-    width: 50%;
+    width: 50rem;
+    height: 26rem;
   }
 `;

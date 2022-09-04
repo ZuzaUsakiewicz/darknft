@@ -18,7 +18,7 @@ export const ClientsContainer = styled.section`
     gap: 1rem;
   }
   @media ${mediaQueries.laptop} {
-    padding: 8rem;
+    padding: 10rem 8rem;
 
     img {
       width: 10rem;

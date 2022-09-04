@@ -3,12 +3,17 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 /* RESET */
 /* Box sizing rules */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: inherit;
+}
+html {
+  font-size: 16px;
 }
 
 /* Remove default margin */
@@ -38,9 +43,9 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  position: relative;
 }
 
 /* A elements that don't have a class get default styles */

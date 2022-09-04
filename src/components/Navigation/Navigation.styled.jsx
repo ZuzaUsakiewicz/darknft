@@ -8,8 +8,7 @@ export const Navbar = styled.nav`
   top: 0;
   padding: 2rem 0.5rem;
   height: 3rem;
-  background: ${({ navBg }) =>
-    navBg ? "rgba(7, 0, 0, 0.452)" : "transparent"};
+  background: ${({ navBg }) => (navBg ? "rgba(7, 0, 0, 0.66)" : "transparent")};
   z-index: 999;
   transition: background 0.5s linear;
   img {

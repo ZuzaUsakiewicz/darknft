@@ -8,7 +8,7 @@ import {
   Loved,
   CurrentBidContainer,
 } from "./NftCard.styled";
-import heart from "../../assets/heart.svg";
+import heart from "../../assets/icons/heart.svg";
 
 const NftCard = ({ item }) => {
   return (

@@ -1,8 +1,8 @@
 import { ClientsContainer } from "./ClientsLogos.styled";
-import Binance from "../../assets/binance.svg";
-import Bitmex from "../../assets/bitmex.svg";
-import Blockchain from "../../assets/blockchain.svg";
-import Coinbase from "../../assets/coinbase.svg";
+import Binance from "../../assets/icons/binance.svg";
+import Bitmex from "../../assets/icons/bitmex.svg";
+import Blockchain from "../../assets/icons/blockchain.svg";
+import Coinbase from "../../assets/icons/coinbase.svg";
 
 const ClientsLogos = () => {
   return (

@@ -15,7 +15,7 @@ import {
   NumbersContainer,
 } from "../HomePage/HeroSection.styled";
 import { Button } from "../Buttons/Button.styled";
-import Pattern from "../../assets/pattern.jpg";
+import Pattern from "../../assets/photos/pattern.jpg";
 import { NftContext } from "../../App";
 
 const HeroSection = () => {

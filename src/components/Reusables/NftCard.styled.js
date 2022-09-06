@@ -15,10 +15,27 @@ export const CardContainer = styled.div`
 export const ImageContainer = styled.div`
   width: 18rem;
   height: 20rem;
+  position: relative;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  &:after {
+    content: "03:18:24";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3rem;
+    background: linear-gradient(
+      to right,
+      rgba(128, 0, 128, 0.7),
+      rgba(239, 157, 240, 0.7)
+    );
   }
 `;
 

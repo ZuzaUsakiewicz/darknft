@@ -7,8 +7,9 @@ import {
   HamburgerButton,
   ActionButton,
 } from "./Navigation.styled";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/icons/logo.svg";
 import Modal from "../Modal/Modal";
+import ConnectWalletModal from "../Modal/ConnectWalletModal";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
@@ -61,7 +62,7 @@ const Navigation = () => {
         <div></div>
       </HamburgerButton>
       <Modal handleClose={() => setIsOpenModal(false)} isOpen={isOpenModal}>
-        This is Modal Content!
+        <ConnectWalletModal />
       </Modal>
     </Navbar>
   );

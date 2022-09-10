@@ -22,6 +22,20 @@ export const FooterContainer = styled.footer`
     width: 6rem;
     height: auto;
   }
+  @media ${mediaQueries.laptop} {
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    gap: 3.5rem;
+    p {
+      width: 27%;
+      max-width: 500px;
+    }
+  }
+  @media ${mediaQueries.desktop} {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 `;
 
 export const LinksContainer = styled.div`
@@ -31,6 +45,9 @@ export const LinksContainer = styled.div`
     text-decoration: none;
     color: inherit;
     color: ${({ theme }) => theme.colors.footerColor};
+  }
+  @media ${mediaQueries.laptop} {
+    gap: 5rem;
   }
 `;
 export const LinkList = styled.ul`
@@ -42,6 +59,14 @@ export const LinkList = styled.ul`
 export const IconsContainer = styled.div`
   display: flex;
   gap: 1rem;
+  @media ${mediaQueries.laptop} {
+    position: absolute;
+    left: 35%;
+    bottom: 15%;
+  }
+  @media ${mediaQueries.desktop} {
+    max-width: 300px;
+  }
 `;
 
 export const IconLink = styled(Link)`

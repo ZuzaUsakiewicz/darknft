@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../Sections/Container.styled";
+import { Container } from "../Reusables/Container.styled";
 import { mediaQueries } from "../../theme/mediaQueries";
 import { Button } from "../Buttons/Button.styled";
 
@@ -16,6 +16,10 @@ export const HeroContainer = styled(Container)`
   }
   @media ${mediaQueries.laptop} {
     padding-top: 5rem;
+  }
+  @media ${mediaQueries.desktop} {
+    max-width: 3300px;
+    margin: 0 auto;
   }
 `;
 
@@ -34,6 +38,10 @@ export const HeroPattern = styled.img`
 `;
 export const Aside = styled.div`
   @media ${mediaQueries.tablet} {
+    width: 50%;
+    align-items: center;
+  }
+  @media ${mediaQueries.laptop} {
     width: 60%;
     align-items: left;
   }
@@ -72,7 +80,11 @@ export const HeroCardContainer = styled.div`
   width: 17.625rem;
   height: 23.625rem;
   position: relative;
-
+  @media ${mediaQueries.tablet} {
+    width: 18rem;
+    height: 24rem;
+    padding-right: 2rem;
+  }
   @media ${mediaQueries.laptop} {
     width: 26rem;
     height: 40rem;
@@ -99,16 +111,18 @@ export const CardBlur = styled.div`
   transform: translate(-50%, -50%);
   background: rgba(79, 70, 78, 0.35);
   z-index: -1;
-  width: 100vw;
+  width: 96vw;
   overflow-x: hidden;
   height: 30rem;
   @media ${mediaQueries.tablet} {
-    width: 28rem;
-    height: 45rem;
+    width: 24rem;
+    height: 46rem;
+    left: 38%;
   }
   @media ${mediaQueries.laptop} {
     width: 48rem;
     height: 54rem;
+    left: 50%;
   }
 `;
 export const ImageContainer = styled.div`
@@ -217,5 +231,10 @@ export const NumbersContainer = styled.div`
     bottom: -3.5rem;
     left: 10.5rem;
     width: 28rem;
+  }
+  @media ${mediaQueries.desktop} {
+    left: 33%;
+    bottom: -20%;
+    transform: translate(0, -67%);
   }
 `;

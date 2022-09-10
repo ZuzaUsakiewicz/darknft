@@ -24,4 +24,8 @@ export const ClientsContainer = styled.section`
       width: 10rem;
     }
   }
+  @media ${mediaQueries.desktop} {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 `;

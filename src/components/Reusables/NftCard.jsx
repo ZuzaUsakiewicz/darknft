@@ -19,12 +19,12 @@ const NftCard = ({ item }) => {
       <InfoContainer>
         <Avatar></Avatar>
         <CardInfo>
-          <h5>{item.category}</h5>
+          <h5>{item.name}</h5>
           <p> by @{item.author}</p>
         </CardInfo>
         <Loved>
           <img src={heart} />
-          <h4>{item.loved}</h4>
+          <h4>{item.loved > 999 ? "999+" : item.loved}</h4>
         </Loved>
       </InfoContainer>
       <CurrentBidContainer>

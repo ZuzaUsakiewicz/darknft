@@ -14,11 +14,12 @@ export const CardContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 18rem;
-  height: 20rem;
+  height: 19rem;
   position: relative;
+  object-position: top center;
   img {
     width: 100%;
-    height: 20rem;
+    height: 19rem;
     object-fit: cover;
   }
   &:after {
@@ -46,7 +47,7 @@ export const InfoContainer = styled.div`
   width: 100%;
 `;
 export const Loved = styled.div`
-  padding: 0 0rem 0 3rem;
+  padding: 0;
   display: flex;
   align-items: center;
   h4 {
@@ -68,7 +69,10 @@ export const Avatar = styled.div`
 export const CardInfo = styled.div`
   font-weight: 500;
   text-align: left;
-  padding: 0.5rem 2rem 0 0.5rem;
+  padding: 0.5rem 0 0 0.5rem;
+  width: 11rem;
+  height: 5rem;
+  word-break: break-all;
   h5 {
     font-size: 1.125rem;
     text-transform: capitalize;

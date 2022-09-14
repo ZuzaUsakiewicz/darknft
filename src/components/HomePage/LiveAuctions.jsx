@@ -17,7 +17,7 @@ const LiveAuctions = () => {
           return <NftCard key={item.id} item={item} />;
         })}
       </CardsContainer>
-      <Button to="/">view all</Button>
+      <Button to="/explore">view all</Button>
     </LiveAuctionsContainer>
   );
 };

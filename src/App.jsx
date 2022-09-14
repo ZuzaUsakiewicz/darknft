@@ -8,9 +8,10 @@ import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Creators from "./pages/Creators";
 import Community from "./pages/Community";
-import ErrorPage from "./pages/ErrorPage";
 import ScrollToTop from "./components/ScrollToTop";
-import nftdata from "./nftdata";
+import nftdata from "./data/nftdata";
+import Page404 from "./components/404/Page404";
+import Footer from "./components/Footer/Footer";
 
 export const NftContext = createContext();
 
@@ -28,8 +29,9 @@ function App() {
             <Route path="explore" element={<Explore />} />
             <Route path="creators" element={<Creators />} />
             <Route path="community" element={<Community />} />
-            <Route path="*" element={<ErrorPage />} />
+            <Route path="*" element={<Page404 />} />
           </Routes>
+          <Footer />
         </ScrollToTop>
       </NftContext.Provider>
     </ThemeProvider>

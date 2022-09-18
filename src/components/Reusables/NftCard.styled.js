@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { flexColumnAlignLeft, flexRowSpaceBetween } from "./styledHelpers";
 
 export const CardContainer = styled.div`
   width: 21.4rem;
@@ -42,9 +43,8 @@ export const ImageContainer = styled.div`
 
 export const InfoContainer = styled.div`
   height: 10rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
+  ${flexRowSpaceBetween}
+  width: 18rem;
 `;
 export const Loved = styled.div`
   padding: 0;
@@ -59,20 +59,15 @@ export const Loved = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
-  background: purple;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-`;
-
 export const CardInfo = styled.div`
   font-weight: 500;
   text-align: left;
-  padding: 0.5rem 0 0 0.5rem;
-  width: 11rem;
+  padding: 0.5rem 0 0 0;
+  width: 9rem;
   height: 5rem;
   word-break: break-all;
+  padding-left: 0.4rem;
+  ${flexColumnAlignLeft};
   h5 {
     font-size: 1.125rem;
     text-transform: capitalize;

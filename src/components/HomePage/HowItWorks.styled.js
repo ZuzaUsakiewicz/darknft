@@ -43,7 +43,7 @@ export const Step = styled.div`
     top: -1rem;
     @media ${mediaQueries.tablet} {
       padding: 2.6rem;
-      top: -1.3rem;
+      top: -1.2rem;
     }
   }
   img {

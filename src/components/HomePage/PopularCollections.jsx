@@ -5,9 +5,10 @@ import { NftContext } from "../../App";
 import {
   CollectionsContainer,
   CollectionCard,
+  CollectionImage,
   CardInfo,
 } from "./PopularCollections.styled";
-import { Avatar } from "../Reusables/NftCard.styled";
+import Avatar from "../Reusables/Avatar";
 import { Button } from "../Buttons/Button.styled";
 
 const PopularCollections = () => {
@@ -26,10 +27,10 @@ const PopularCollections = () => {
         {collections.map((collection, index) => {
           return (
             <CollectionCard key={index}>
-              <img src={collection.image} />
+              <CollectionImage src={collection.image} />
               <CardInfo>
                 <span>
-                  <Avatar />
+                  <Avatar imgSrc={collection.image} />
                   <h3>@{collection.author}</h3>
                 </span>
                 <p>ERC-721</p>

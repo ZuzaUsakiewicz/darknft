@@ -20,12 +20,13 @@ export const CollectionsContainer = styled.div`
 
 export const CollectionCard = styled(CardContainer)`
   height: 17.4rem;
-  img {
-    width: 18rem;
-    height: 11rem;
-    object-fit: cover;
-    padding-top: 1rem;
-  }
+`;
+
+export const CollectionImage = styled.img`
+  width: 18rem;
+  height: 11rem;
+  object-fit: cover;
+  padding-top: 1rem;
 `;
 
 export const CardInfo = styled.div`

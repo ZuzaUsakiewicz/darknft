@@ -3,6 +3,8 @@ import {
   flexColumnCenter,
   flexRowCenter,
   flexRowSpaceBetween,
+  CardShadow,
+  CardShadowHover,
 } from "../Reusables/styledHelpers";
 import { mediaQueries } from "../../theme/mediaQueries";
 
@@ -15,6 +17,7 @@ export const CreatorsContainer = styled.div`
     padding: 4rem 5rem;
     max-width: 58rem;
     ${flexRowCenter};
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
 `;
@@ -25,8 +28,15 @@ export const CreatorContainer = styled.div`
   padding: 0 0.8rem;
   background: #302034;
   position: relative;
+  ${CardShadow};
   @media ${mediaQueries.laptop} {
     width: 23rem;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+      ${CardShadowHover}
+    }
   }
 
   h3 {

@@ -2,13 +2,14 @@ import { SectionContainer } from "../Reusables/Container.styled";
 import { SectionTitle } from "../Reusables/SectionTitle.styled";
 import { useContext } from "react";
 import { NftContext } from "../../App";
-import { Avatar } from "../Reusables/NftCard.styled";
+import Avatar from "../Reusables/Avatar";
 import {
   CreatorsContainer,
   CreatorContainer,
   Name,
   Items,
 } from "./TopCreatorsSection.styled";
+import { Button } from "../Buttons/Button.styled";
 
 const TopCreatorsSection = () => {
   const data = useContext(NftContext);
@@ -24,7 +25,7 @@ const TopCreatorsSection = () => {
         {/* each creator component will be a link to individual route with details soon... */}
         {creators.slice(0, 4).map((creator, index) => (
           <CreatorContainer key={index}>
-            <Avatar />
+            <Avatar imgSrc={creator.image} />
             <Name>
               <h3>{creator.author}</h3>
               <h4>{creator.currentBid}</h4>
@@ -47,6 +48,7 @@ const TopCreatorsSection = () => {
           </CreatorContainer>
         ))}
       </CreatorsContainer>
+      <Button to="/creators">view all</Button>
     </SectionContainer>
   );
 };

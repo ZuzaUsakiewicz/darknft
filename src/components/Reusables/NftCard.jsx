@@ -3,12 +3,12 @@ import {
   CardContainer,
   ImageContainer,
   InfoContainer,
-  Avatar,
   CardInfo,
   Loved,
   CurrentBidContainer,
 } from "./NftCard.styled";
 import heart from "../../assets/icons/heart.svg";
+import Avatar from "../Reusables/Avatar";
 
 const NftCard = ({ item }) => {
   return (
@@ -17,7 +17,7 @@ const NftCard = ({ item }) => {
         <img src={item.image} />
       </ImageContainer>
       <InfoContainer>
-        <Avatar></Avatar>
+        <Avatar imgSrc={item.image} />
         <CardInfo>
           <h5>{item.name}</h5>
           <p> by @{item.author}</p>

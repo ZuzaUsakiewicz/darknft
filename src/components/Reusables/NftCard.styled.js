@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { flexColumnAlignLeft, flexRowSpaceBetween } from "./styledHelpers";
+import {
+  CardShadow,
+  CardShadowHover,
+  flexColumnAlignLeft,
+  flexRowSpaceBetween,
+} from "./styledHelpers";
+import { mediaQueries } from "../../theme/mediaQueries";
 
 export const CardContainer = styled.div`
   width: 21.4rem;
@@ -11,6 +17,16 @@ export const CardContainer = styled.div`
   align-items: center;
   gap: 0.5rem;
   padding: 1.5rem;
+  ${CardShadow};
+
+  @media ${mediaQueries.laptop} {
+    transition: all 0.3s linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.01);
+      ${CardShadowHover}
+    }
+  }
 `;
 
 export const ImageContainer = styled.div`

@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import { mediaQueries } from "../../theme/mediaQueries";
 
 export const SectionTitle = styled.h2`
-  font-size: 2.25rem;
+  font-size: 2rem;
   text-transform: capitalize;
   font-weight: 700;
   position: relative;
+  @media ${mediaQueries.tablet} {
+    font-size: 2.25rem;
+  }
   &:before {
     content: "";
     position: absolute;

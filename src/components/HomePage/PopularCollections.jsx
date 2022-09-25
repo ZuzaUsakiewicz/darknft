@@ -16,9 +16,6 @@ const PopularCollections = () => {
   let collections = [
     ...new Map(data.map((item) => [item["author"], item])).values(),
   ].slice(0, 3);
-  let categories = [
-    ...new Map(data.map((item) => [item["category"], item])).values(),
-  ];
 
   return (
     <SectionContainer>
@@ -38,7 +35,6 @@ const PopularCollections = () => {
             </CollectionCard>
           );
         })}
-        {console.log(categories)}
       </CollectionsContainer>
       <Button to="/explore">view all</Button>
     </SectionContainer>

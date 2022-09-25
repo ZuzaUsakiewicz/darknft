@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import categories from "../../data/categories";
 import { SectionContainer } from "../Reusables/Container.styled";
 import { CardContainer, ImageContainer } from "../Reusables/NftCard.styled";
@@ -13,14 +14,16 @@ const ExploreByCategories = () => {
       <CollectionsContainer>
         {categories.slice(0, 3).map((category, index) => (
           <CategoryCard key={index}>
-            <CategoryImage>
-              <img src={category.image} />
-            </CategoryImage>
-            <h3>{category.name}</h3>
+            <CategoryLink to={`/explore/?category=${category.name}`}>
+              <CategoryImage>
+                <img src={category.image} />
+              </CategoryImage>
+              <h3>{category.name}</h3>
+            </CategoryLink>
           </CategoryCard>
         ))}
       </CollectionsContainer>
-      <Button to="/categories">View all</Button>
+      <Button to="/explore">View all</Button>
     </SectionContainer>
   );
 };
@@ -29,9 +32,15 @@ const CategoryCard = styled(CardContainer)`
   height: 25rem;
   h3 {
     font-size: 1.25rem;
+    font-weight: 400;
     text-transform: capitalize;
     padding-top: 0.5rem;
   }
+`;
+const CategoryLink = styled(Link)`
+  padding-top: 0.5rem;
+  color: inherit;
+  text-decoration: none;
 `;
 const CategoryImage = styled(ImageContainer)`
   &:after {

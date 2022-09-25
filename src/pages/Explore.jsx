@@ -1,20 +1,45 @@
+import { Outlet, useSearchParams } from "react-router-dom";
 import { useContext } from "react";
 import { NftContext } from "../App";
-import { CardsContainer } from "../components/HomePage/LiveAuctions.styled";
 import { SectionContainer } from "../components/Reusables/Container.styled";
-import NftCard from "../components/Reusables/NftCard";
 import { SectionTitle } from "../components/Reusables/SectionTitle.styled";
+import {
+  CategoriesNavigation,
+  CategoryLink,
+} from "../components/ExplorePage/AllAuctions.styled";
 
 function Explore() {
   const data = useContext(NftContext);
+  let [searchParams] = useSearchParams();
+  let activeLink = searchParams.get("category");
+
+  let categories = [...new Set(data.map((item) => item.category))];
+
   return (
     <SectionContainer style={{ padding: "8rem 1rem 4rem 1rem" }}>
       <SectionTitle>All Auctions</SectionTitle>
-      <CardsContainer style={{ padding: "3rem 0.5rem" }}>
-        {data.map((item) => {
-          return <NftCard key={item.id} item={item} />;
-        })}
-      </CardsContainer>
+      <CategoriesNavigation>
+        <CategoryLink
+          to={"/explore"}
+          style={{
+            color: activeLink === null ? "#FFCE4E" : "inherit",
+          }}
+        >
+          all
+        </CategoryLink>
+        {categories.map((category, index) => (
+          <CategoryLink
+            to={`/explore/?category=${category}`}
+            key={index}
+            style={{
+              color: activeLink === category ? "#FFCE4E" : "inherit",
+            }}
+          >
+            {category}
+          </CategoryLink>
+        ))}
+      </CategoriesNavigation>
+      <Outlet />
     </SectionContainer>
   );
 }

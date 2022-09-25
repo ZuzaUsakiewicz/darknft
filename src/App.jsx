@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import nftdata from "./data/nftdata";
 import Page404 from "./components/404/Page404";
 import Footer from "./components/Footer/Footer";
+import { AllAuctions } from "./components/ExplorePage/AllAuctions";
 
 export const NftContext = createContext();
 
@@ -26,7 +27,10 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="explore" element={<Explore />} />
+            <Route path="explore/" element={<Explore />}>
+              <Route index element={<AllAuctions />} />
+              <Route path="*" element={<Page404 />} />
+            </Route>
             <Route path="creators" element={<Creators />} />
             <Route path="community" element={<Community />} />
             <Route path="*" element={<Page404 />} />

@@ -35,8 +35,6 @@ export const ImageContainer = styled.div`
   position: relative;
   object-position: top center;
   img {
-    width: 100%;
-    height: 19rem;
     object-fit: cover;
   }
   &:after {

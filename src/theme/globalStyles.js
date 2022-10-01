@@ -68,6 +68,26 @@ select {
   font: inherit;
 }
 
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background:${({ theme }) => theme.colors.cardButtonBgColor};
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.colors.backgroundColor};
+  border-radius: 10px;
+  border: 2px solid ${({ theme }) => theme.colors.cardButtonBgColor};
+  width: 10px;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {

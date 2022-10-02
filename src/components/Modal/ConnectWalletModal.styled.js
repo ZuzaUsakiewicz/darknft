@@ -64,7 +64,7 @@ export const Icon = styled.div`
   background: rgba(255, 192, 203, 0.058);
   border-radius: 4px;
   display: flex;
-  justify-conent: center;
+  justify-content: center;
   align-items: center;
 `;
 export const WalletInfoContainer = styled.div`
@@ -85,7 +85,7 @@ export const WalletInfoContainer = styled.div`
 export const Info = styled.p`
   font-size: 0.7rem;
   padding: 0.3rem;
-  tex-aling: justify;
+  text-align: justify;
   @media ${mediaQueries.tablet} {
     font-size: 0.8rem;
     padding: 2rem 0 2rem 1rem;

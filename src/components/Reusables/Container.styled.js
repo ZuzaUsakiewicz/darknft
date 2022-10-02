@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../theme/mediaQueries";
+import { motion } from "framer-motion";
 
-export const Container = styled.section`
+export const Container = styled(motion.section)`
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@ export const Container = styled.section`
   }
 `;
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled(motion.section)`
   display: flex;
   flex-direction: column;
   justify-content: center;

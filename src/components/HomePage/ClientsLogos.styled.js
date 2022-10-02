@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { mediaQueries } from "../../theme/mediaQueries";
+import { motion } from "framer-motion";
 
-export const ClientsContainer = styled.section`
+export const ClientsContainer = styled(motion.section)`
   padding: 6rem 1rem;
   display: flex;
   justify-content: center;

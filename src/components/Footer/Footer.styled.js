@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { mediaQueries } from "../../theme/mediaQueries";
+import { motion } from "framer-motion";
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled(motion.footer)`
   display: flex;
   flex-direction: column;
   align-items: center;

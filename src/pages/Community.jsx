@@ -1,7 +1,14 @@
 import React from "react";
+import LoadingSection from "../components/Reusables/LoadingSection";
 
 function Community() {
-  return <div>Nothing here yet</div>;
+  return (
+    <LoadingSection
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    />
+  );
 }
 
 export default Community;

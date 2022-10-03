@@ -18,7 +18,12 @@ function Creators() {
   ];
 
   return (
-    <SectionContainer style={{ padding: "8rem 0" }}>
+    <SectionContainer
+      style={{ padding: "8rem 0" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <SectionTitle>All creators</SectionTitle>
       <CreatorsContainer>
         {creators.map((creator, index) => (

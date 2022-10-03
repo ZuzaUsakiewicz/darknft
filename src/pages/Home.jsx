@@ -6,10 +6,15 @@ import PopularCollections from "../components/HomePage/PopularCollections";
 import Newsletter from "../components/HomePage/Newsletter";
 import TopCreatorsSection from "../components/HomePage/TopCreatorsSection";
 import ExploreByCategories from "../components/HomePage/ExploreByCategories";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <HeroSection />
       <ClientsLogos />
       <LiveAuctions />
@@ -18,7 +23,7 @@ function Home() {
       <ExploreByCategories />
       <TopCreatorsSection />
       <Newsletter />
-    </>
+    </motion.div>
   );
 }
 

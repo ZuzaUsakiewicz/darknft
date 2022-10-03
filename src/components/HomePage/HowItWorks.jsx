@@ -9,7 +9,11 @@ import line from "../../assets/icons/line.svg";
 
 const HowItWorks = () => {
   return (
-    <SectionContainer>
+    <SectionContainer
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.5, duration: 1 }}
+    >
       <SectionTitle color="#1d70a2">How it works</SectionTitle>
       <StepsContainer>
         <Step>

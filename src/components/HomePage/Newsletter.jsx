@@ -8,7 +8,11 @@ import pattern from "../../assets/photos/pattern.jpg";
 
 const Newsletter = () => {
   return (
-    <NewsletterContainer>
+    <NewsletterContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <NewsletterContent>
         <h2>Ready for Next NFT Drop?</h2>
         <NewsletterBg>

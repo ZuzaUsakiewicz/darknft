@@ -23,7 +23,7 @@ const HeroSection = () => {
   const cardItem = data.filter((item) => item.isLive == true)[4];
 
   return (
-    <HeroContainer>
+    <HeroContainer initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
       <HeroPattern alt="pattern background" src={Pattern} />
       <Aside>
         <HeroHeading>

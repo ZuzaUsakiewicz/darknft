@@ -33,7 +33,11 @@ const Footer = () => {
   ];
 
   return (
-    <FooterContainer>
+    <FooterContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+    >
       <Link to="/">
         <img src={Logo} alt="nft logo" />
       </Link>

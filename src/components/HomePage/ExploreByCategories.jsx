@@ -9,7 +9,11 @@ import { CollectionsContainer } from "./PopularCollections.styled";
 
 const ExploreByCategories = () => {
   return (
-    <SectionContainer>
+    <SectionContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <SectionTitle color="#435db0">Explore by categories</SectionTitle>
       <CollectionsContainer>
         {categories.slice(0, 3).map((category, index) => (
@@ -43,6 +47,9 @@ const CategoryLink = styled(Link)`
   text-decoration: none;
 `;
 const CategoryImage = styled(ImageContainer)`
+  img {
+    height: 19rem;
+  }
   &:after {
     display: none;
   }

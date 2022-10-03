@@ -10,7 +10,11 @@ const LiveAuctions = () => {
   const threeCards = data.slice(0, 3);
 
   return (
-    <LiveAuctionsContainer>
+    <LiveAuctionsContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <SectionTitle>live auctions</SectionTitle>
       <CardsContainer>
         {threeCards.map((item) => {

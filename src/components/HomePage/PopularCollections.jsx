@@ -18,7 +18,11 @@ const PopularCollections = () => {
   ].slice(0, 3);
 
   return (
-    <SectionContainer>
+    <SectionContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <SectionTitle color="#E03054">Popular Collections</SectionTitle>
       <CollectionsContainer>
         {collections.map((collection, index) => {

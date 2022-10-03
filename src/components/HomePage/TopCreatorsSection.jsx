@@ -19,7 +19,11 @@ const TopCreatorsSection = () => {
   ];
 
   return (
-    <SectionContainer>
+    <SectionContainer
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <SectionTitle color="#E03054">Top Creators</SectionTitle>
       <CreatorsContainer>
         {/* each creator component will be a link to individual route with details soon... */}

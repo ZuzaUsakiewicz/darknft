@@ -1,33 +1,40 @@
+import CatMusic from "../assets/photos/cat-music.jpg";
+import CatArt from "../assets/photos/cat-art.jpg";
+import CatEntr from "../assets/photos/cat-entertainment.jpg";
+import CatGaming from "../assets/photos/cat-gaming.jpg";
+import CatGoods from "../assets/photos/cat-goods.jpg";
+import CatLiterature from "../assets/photos/cat-literature.jpg";
+
 const categories = [
   {
     id: 0,
     name: "music",
-    image: "../assets/photos/cat-music.jpg",
+    image: `${CatMusic}`,
   },
   {
     id: 1,
     name: "art",
-    image: "../assets/photos/cat-art.jpg",
+    image: `${CatArt}`,
   },
   {
     id: 2,
     name: "entertainment",
-    image: "../assets/photos/cat-entertainment.jpg",
+    image: `${CatEntr}`,
   },
   {
     id: 3,
     name: "gaming",
-    image: "../assets/photos/cat-gaming.jpg",
+    image: `${CatGaming}`,
   },
   {
     id: 4,
     name: "literature",
-    image: "../assets/photos/cat-literature.jpg",
+    image: `${CatLiterature}`,
   },
   {
     id: 5,
     name: "goods",
-    image: "../assets/photos/cat-goods.jpg",
+    image: `${CatGoods}`,
   },
 ];
 

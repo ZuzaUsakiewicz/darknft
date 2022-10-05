@@ -7,7 +7,7 @@ const nftdata = [
     author: "Edward.",
     isLive: true,
     category: "art",
-    image: "../src/assets/photos/nft1.jpg",
+    image: "/assets/photos/nft1.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const nftdata = [
     author: "Bobbb",
     isLive: true,
     category: "art",
-    image: "../src/assets/photos/nft2.jpg",
+    image: "/assets/photos/nft2.jpg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const nftdata = [
     author: "Jane",
     isLive: true,
     category: "literature",
-    image: "../src/assets/photos/nft3.jpg",
+    image: "/assets/photos/nft3.jpg",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const nftdata = [
     author: "Bobbb",
     isLive: true,
     category: "music",
-    image: "../src/assets/photos/nft4.jpg",
+    image: "/assets/photos/nft4.jpg",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const nftdata = [
     author: "Jane",
     isLive: true,
     category: "music",
-    image: "../src/assets/photos/nft5.jpg",
+    image: "/assets/photos/nft5.jpg",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const nftdata = [
     author: "Edward.",
     isLive: true,
     category: "gaming",
-    image: "../src/assets/photos/nft6.jpg",
+    image: "/assets/photos/nft6.jpg",
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const nftdata = [
     author: "Bobbb",
     isLive: true,
     category: "entertainment",
-    image: "../src/assets/photos/nft7.jpg",
+    image: "/assets/photos/nft7.jpg",
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const nftdata = [
     author: "oxoxox",
     isLive: true,
     category: "music",
-    image: "../src/assets/photos/nft8.jpg",
+    image: "/assets/photos/nft8.jpg",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const nftdata = [
     author: "oxoxox",
     isLive: true,
     category: "music",
-    image: "../src/assets/photos/nft9.jpg",
+    image: "/assets/photos/nft9.jpg",
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ const nftdata = [
     author: "Edward.",
     isLive: true,
     category: "gaming",
-    image: "../src/assets/photos/nft10.jpg",
+    image: "/assets/photos/nft10.jpg",
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ const nftdata = [
     author: "Mammoth",
     isLive: true,
     category: "goods",
-    image: "../src/assets/photos/nft11.jpg",
+    image: "/assets/photos/nft11.jpg",
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ const nftdata = [
     author: "Mammoth",
     isLive: true,
     category: "music",
-    image: "../src/assets/photos/nft12.jpg",
+    image: "/assets/photos/nft12.jpg",
   },
 ];
 

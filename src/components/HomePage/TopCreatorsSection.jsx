@@ -22,7 +22,7 @@ const TopCreatorsSection = () => {
       <SectionTitle color="#E03054">Top Creators</SectionTitle>
       <CreatorsContainer>
         {creators.slice(0, 4).map((creator, index) => (
-          <CreatorCard creator={creator} data={data} />
+          <CreatorCard creator={creator} data={data} key={index} />
         ))}
       </CreatorsContainer>
       <Button to="/creators">view all</Button>

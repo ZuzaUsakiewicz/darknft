@@ -110,3 +110,28 @@ export const CurrentBidContainer = styled.div`
     font-weight: 700;
   }
 `;
+
+export const CardButton = styled.button`
+  padding: 0.6rem 4rem;
+  border: 1px solid #bcb39a;
+  background: ${({ theme }) => theme.colors.cardButtonBgColor};
+  width: 100%;
+  font-size: 1.25rem;
+  color: ${({ primary, theme }) =>
+    primary ? theme.colors.buttonTextColor : theme.colors.bodyTextColor};
+  cursor: pointer;
+  text-decoration: none;
+  font-family: ${({ theme }) => theme.typography.secondaryFont};
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transition: opacity 0.3s linear, transform 0.3s linear;
+  &:hover {
+    opacity: 0.6;
+    transform: translateY(1px);
+  }
+  @media ${mediaQueries.laptop} {
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+  }
+`;

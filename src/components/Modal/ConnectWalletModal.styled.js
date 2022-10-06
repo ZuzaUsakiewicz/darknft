@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mediaQueries } from "../../theme/mediaQueries";
+import { motion } from "framer-motion";
 
-export const ConnectWalletContainer = styled.div`
+export const ConnectWalletContainer = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,6 +46,7 @@ export const ConnectWalletOptions = styled.div`
   @media ${mediaQueries.tablet} {
     width: 40%;
     border-right: 1px solid grey;
+    padding: 0 1rem 1rem 2.5rem;
   }
 `;
 export const Option = styled(Link)`
@@ -95,6 +97,7 @@ export const Buttons = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  padding: 0.5rem 0;
   @media ${mediaQueries.tablet} {
     flex-direction: column;
   }

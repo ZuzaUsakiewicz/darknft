@@ -48,7 +48,9 @@ export const InfoContainer = styled.div`
 
 export const CollectButton = styled(Button)`
   margin: 0 auto;
-  width: 60%;
   padding: 0.6rem 1.2rem;
   font-size: 1.3rem;
+  @media ${mediaQueries.laptop} {
+    width: 60%;
+  }
 `;

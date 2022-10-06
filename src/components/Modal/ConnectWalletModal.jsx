@@ -12,7 +12,11 @@ import { GiFox, GiAbstract053, GiWallet, GiRaining } from "react-icons/gi";
 
 const ConnectWalletModal = () => {
   return (
-    <ConnectWalletContainer>
+    <ConnectWalletContainer
+      initial={{ opacity: 0, y: 50, scale: 0.3 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 20, scale: 0.5, transition: { delay: 1 } }}
+    >
       <ConnectWalletOptions>
         <h2>Connect a Wallet</h2>
         <h4>Popular</h4>

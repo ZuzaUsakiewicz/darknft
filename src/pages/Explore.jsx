@@ -16,12 +16,7 @@ function Explore() {
   let categories = [...new Set(data.map((item) => item.category))];
 
   return (
-    <SectionContainer
-      style={{ padding: "8rem 1rem 4rem 1rem" }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <SectionContainer style={{ padding: "8rem 1rem 4rem 1rem" }}>
       <SectionTitle>All Auctions</SectionTitle>
       <CategoriesNavigation>
         <CategoryLink

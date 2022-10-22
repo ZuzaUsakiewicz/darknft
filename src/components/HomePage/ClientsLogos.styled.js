@@ -9,18 +9,14 @@ export const ClientsContainer = styled(motion.section)`
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
+  max-width: 2000px;
+  margin: 0 auto;
   img {
     width: 7rem;
     height: auto;
   }
-  @media ${mediaQueries.tablet} {
-    padding: 16rem 4rem;
-    justify-content: space-around;
-    gap: 1rem;
-  }
   @media ${mediaQueries.laptop} {
-    padding: 10rem 8rem;
-
+    padding: 13rem 8rem;
     img {
       width: 10rem;
     }

@@ -17,10 +17,6 @@ export const HeroContainer = styled(Container)`
   @media ${mediaQueries.laptop} {
     padding-top: 5rem;
   }
-  @media ${mediaQueries.desktop} {
-    max-width: 3300px;
-    margin: 0 auto;
-  }
 `;
 
 export const HeroPattern = styled.img`
@@ -45,6 +41,9 @@ export const Aside = styled.div`
     width: 60%;
     align-items: left;
   }
+  @media ${mediaQueries.desktop} {
+    width: 80%;
+  }
 `;
 export const HeroHeading = styled.h1`
   font-size: 42px;
@@ -62,6 +61,12 @@ export const HeroHeading = styled.h1`
     text-align: left;
     line-height: 6rem;
     padding: 1rem 0 3rem 0;
+  }
+  @media ${mediaQueries.desktop} {
+    font-size: 5.3rem;
+    text-align: left;
+    line-height: 6rem;
+    padding: 1rem 0 3rem 2rem;
   }
 `;
 
@@ -102,6 +107,9 @@ export const HeroCardContainer = styled.div`
       filter: blur(150px);
       z-index: -1;
     }
+  }
+  @media ${mediaQueries.desktop} {
+    width: 34rem;
   }
 `;
 export const CardBlur = styled.div`
@@ -227,14 +235,13 @@ export const NumbersContainer = styled.div`
     width: 40%;
   }
   @media ${mediaQueries.laptop} {
-    position: absolute;
-    bottom: -3.5rem;
-    left: 10.5rem;
-    width: 28rem;
+    left: 20%;
+    bottom: -5%;
+    width: 30rem;
   }
   @media ${mediaQueries.desktop} {
-    left: 33%;
-    bottom: -20%;
-    transform: translate(0, -67%);
+    left: 30%;
+    bottom: -10%;
+    width: 30rem;
   }
 `;

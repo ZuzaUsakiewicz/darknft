@@ -6,7 +6,10 @@ const Page404 = () => {
     <SectionContainer>
       <Text404>
         <h2>404!</h2>
-        <p>Sorry, there's no such a thing you're looking for</p>
+        <p>
+          Nothing's wrong here. I've made that link redirects to a 404 page on
+          purpose.
+        </p>
         <GoBackLink to="/">Go back to home page</GoBackLink>
       </Text404>
     </SectionContainer>
